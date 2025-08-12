@@ -1,0 +1,7 @@
+url: "https://maurolepisdreki.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Fenrir's Archive"
+breif: "The Portfolio and Weblog of a Modern Prometheus"
+jslibs: # external javascript libraries from CDN
+  - url: "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+

@@ -1,0 +1,11 @@
+		<nav id="navbar">
+			{% if site.data.navbar.top[0] %}
+				<ul id="navbar-topmenu" class="menu menubar">
+					{% for entry in site.data.navbar.top %}
+						<li class="menu-entry menubar-entry">
+							{% include navbar-entry.html my=entry %}
+						</li>
+				{% endfor %}
+				</ul>
+			{% endif %}
+		</nav>

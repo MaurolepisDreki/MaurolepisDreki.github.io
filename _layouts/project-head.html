@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+{% for project in site.data.projects.list %}
+	{% for pgcat in page.categories %}
+		{% if project.category == pgcat %}
+			<h1 class="projname">{{ project.name }}</h1>
+			<p class="projbrief">{{ project.breif }}</p>
+		{% endif %}
+	{% endfor %}
+{% endfor %}
+
+{{ content }}
+
+<h2 class="projnews">News</h2>
+{% for allcat in site.categories %}
+	{% for mycat in page.categories %}
+		{% if allcat[0] == mycat %}
+			{% for post in allcat[1] %}
+				<div class="postentry">
+					<p><span class="postdate"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y.%j" }}</time></span> <a href="{{ post.url }}">{{ post.title }}</a></p>
+					<p>{{ post.excerpt }}</p>
+				</div>
+			{% endfor %}
+		{% endif %}
+	{% endfor %}
+{% endfor %}

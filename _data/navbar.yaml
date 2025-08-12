@@ -1,0 +1,17 @@
+top:
+  - name: Index
+    url: /
+  - name: Weblog
+    submenu:
+      - name: News
+      - name: Recent
+        url: /weblog/recent
+      - name: All
+        url: /weblog/
+      - name: By Project
+        submenu:
+          - name: What You See Here
+            url: /wysh/
+          - name: A'viid Katuzje-bazrog
+            url: /a_viid/
+      

@@ -1,0 +1,28 @@
+---
+stylesheets:
+  - 
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+	 {% if site.jslibs[0] %}
+		{% for jslib in site.jslibs %}
+	<script type="text/javascript" src="{{ jslib.url }}"></script>
+		{% endfor %}
+	{% endif %}
+	<script type="text/javascript" src="{{ "/assets/js/main.js" | relative_url }}"></script>
+	<script type="text/javascript" src="{{ "/assets/js/navbar.js" | relative_url }}"></script>
+  </head>
+  <body>
+		{% include header.html %}
+		{% include navbar.html %}
+		<main>
+			{{ content }}
+		</main>
+		{% include footer.html %}
+  </body>
+</html>

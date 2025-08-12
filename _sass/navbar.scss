@@ -1,0 +1,86 @@
+$backgroundColor: #ffffff;
+$bodyColor: #000000;
+$bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$navActiveColor: #4CAF50;
+$navHoverColor: #111;
+$navBackgroundColor: #333;
+$navTextColor: #FFF;
+
+#navbar {
+	display: block;
+	position: sticky;
+	padding: 0;
+	margin: 0;
+	top: 0;
+}
+
+#navbar-topmenu {
+	display: flex;
+}
+
+.menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#navbar-topmenu, .menu-entry {
+	background-color: $navBackgroundColor;
+}
+
+.menubar-entry {
+	float: left;
+}
+
+/* FIXME: Menu Manual Size Adjustment */
+.menubar .menu-item {
+	width: 70px;
+}
+
+.submenu .menu-item {
+	width: 100px;
+}
+
+.submenu .submenu .menu-item {
+	width: 160px;
+}
+
+#navbar .submenu {
+	display: none;
+	position: absolute;
+}
+
+#navbar .submenu-entry {
+	display: block;
+	position: relative;
+}
+
+#navbar .submenu .submenu {
+	float: left;
+	top: 0;
+	left: 100%;
+}
+
+.menu-item {
+	display: block;
+	padding: 8px;
+	text-align: center;
+}
+
+#navbar a, #navbar a:link, #navbar a:visited {
+	text-decoration: none;
+	color: $navTextColor;
+}
+
+#navbar .menu-item:hover, #navbar .menu-item:has(+.submenu .menu-item:hover) {
+	background-color: $navHoverColor;
+}
+
+#navbar .menu-item.active, #navbar .menu-item:has(+.submenu .menu-item.active),
+#navbar .menu-item.active:has(+.submenu .menu-item:hover) {
+	background-color: $navActiveColor;
+}
+
+#navbar .menu-item:has(+.submenu):hover+.submenu, #navbar .menu-item:has(+.submenu .menu-item:hover)+.submenu {
+	display: block;
+}

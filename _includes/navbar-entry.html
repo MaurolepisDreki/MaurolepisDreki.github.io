@@ -1,0 +1,10 @@
+			<a class="menu-item" {% if include.my.url %}href="{{ include.my.url }}"{% endif %}>{{ include.my.name }}</a>
+				{% if include.my.submenu %}
+					<ul class="menu submenu">
+						{% for entry in include.my.submenu %}
+							<li class="menu-entry submenu-entry">
+								{% include navbar-entry.html my=entry %}
+							</li>
+						{% endfor %}
+					</ul>
+				{% endif %}
