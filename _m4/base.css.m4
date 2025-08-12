@@ -1,11 +1,9 @@
-$backgroundColor: #ffffff;
-$bodyColor: #000000;
-$bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+include(`variables.m4')dnl
 
 body {
-  background: $backgroundColor;
-  color: $bodyColor;
-  font-family: $bodyFont;
+  background: backgroundColor;
+  color: bodyColor;
+  font-family: bodyFont;
 }
 
 main {
@@ -14,7 +12,7 @@ main {
 
 blockquote {
 	padding: 0 1.5em;
-	border: 2px solid $bodyColor;
+	border: 2px solid bodyColor;
 }
 
 .highlight {

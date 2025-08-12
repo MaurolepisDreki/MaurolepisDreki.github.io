@@ -1,10 +1,4 @@
-$backgroundColor: #ffffff;
-$bodyColor: #000000;
-$bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-$navActiveColor: #4CAF50;
-$navHoverColor: #111;
-$navBackgroundColor: #333;
-$navTextColor: #FFF;
+include(`variables.m4')dnl
 
 #navbar {
 	display: block;
@@ -25,7 +19,7 @@ $navTextColor: #FFF;
 }
 
 #navbar-topmenu, .menu-entry {
-	background-color: $navBackgroundColor;
+	background-color: navBackgroundColor;
 }
 
 .menubar-entry {
@@ -69,16 +63,16 @@ $navTextColor: #FFF;
 
 #navbar a, #navbar a:link, #navbar a:visited {
 	text-decoration: none;
-	color: $navTextColor;
+	color: navTextColor;
 }
 
 #navbar .menu-item:hover, #navbar .menu-item:has(+.submenu .menu-item:hover) {
-	background-color: $navHoverColor;
+	background-color: navHoverColor;
 }
 
 #navbar .menu-item.active, #navbar .menu-item:has(+.submenu .menu-item.active),
 #navbar .menu-item.active:has(+.submenu .menu-item:hover) {
-	background-color: $navActiveColor;
+	background-color: navActiveColor;
 }
 
 #navbar .menu-item:has(+.submenu):hover+.submenu, #navbar .menu-item:has(+.submenu .menu-item:hover)+.submenu {
